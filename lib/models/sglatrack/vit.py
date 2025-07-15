@@ -17,6 +17,21 @@ Hacked together by / Copyright 2021 Ross Wightman
 
 Modified by Botao Ye
 """
+
+# -----------------------------------------------------------------------------
+# SGLATrack 注释补充
+# -----------------------------------------------------------------------------
+# 本仓库中用于跟踪任务的 ViT backbone，核心改动并不在本文件的 Attention/Block 实现，
+# 而是在 `lib/models/sglatrack/base_backbone.py` 的 `BaseBackbone`：
+#   - 负责 template/search token 的 one-stream 拼接
+#   - 负责在饱和层 l* 之后根据 selection module 跳过冗余层（SGLA）
+#
+# 本文件主要提供：
+#   1) ViT 的基本组件（Attention、Block）
+#   2) VisionTransformer 网络结构（继承 BaseBackbone，因此 forward 逻辑由 BaseBackbone 提供）
+#   3) 预训练权重加载工具与 vit_base_patch16_224() 构建函数
+# -----------------------------------------------------------------------------
+
 import math
 import logging
 from functools import partial
