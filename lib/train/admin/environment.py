@@ -12,6 +12,7 @@ def create_default_local_file():
         'tensorboard_dir': 'self.workspace_dir + \'/tensorboard/\'',
         'pretrained_networks': 'self.workspace_dir + \'/pretrained_networks/\'',
         'lasot_dir': empty_str,
+        'lsotb_dir': empty_str,
         'got10k_dir': empty_str,
         'trackingnet_dir': empty_str,
         'coco_dir': empty_str,
@@ -51,6 +52,7 @@ def create_default_local_file_ITP_train(workspace_dir, data_dir):
         'tensorboard_dir': os.path.join(workspace_dir, 'tensorboard'),    # Directory for tensorboard files.
         'pretrained_networks': os.path.join(workspace_dir, 'pretrained_networks'),
         'lasot_dir': os.path.join(data_dir, 'lasot'),
+        'lsotb_dir': os.path.join(data_dir),
         'got10k_dir': os.path.join(data_dir, 'got10k/train'),
         'got10k_val_dir': os.path.join(data_dir, 'got10k/val'),
         'lasot_lmdb_dir': os.path.join(data_dir, 'lasot_lmdb'),

@@ -4,6 +4,7 @@ class EnvironmentSettings:
         self.tensorboard_dir = '/home/data/CVPR25_REB/sgla/Deit_MLP_withnograd_maxcos/tensorboard'    # Directory for tensorboard files.
         self.pretrained_networks = '/home/data/CVPR25_REB/sgla/Deit_MLP_withnograd_maxcos/pretrained_networks'
         self.lasot_dir = '/home/data/lasot'
+        self.lsotb_dir = '/root/shared-nvme/datasets/data/train_data/LSOTB_TIR_train'
         self.got10k_dir = '/home/data/got10k/train'
         self.got10k_val_dir = '/home/data/got10k/val'
         self.lasot_lmdb_dir = '/home/data/lasot_lmdb'
